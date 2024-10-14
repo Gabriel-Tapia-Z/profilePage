@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Noto Sans KR',sans-serif;
+}
+
+p{
+    font-size: 0.9em;
+}
+
+*[textDark]{
+    color: rgb(64, 64, 64);
+}
+
+*[textLight]{
+    color: rgb(93, 93, 93);
+}
+
+*[cardButtonText]{
+    font-size: 0.8em;
+    font-weight: 500;
+    color: rgb(0, 136, 255);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    padding-inline: 24px;
+    gap: 24px;
+}
+
+nav>h1{
+    flex:1;
+}
+
+
+nav>ul{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+nav>ul>li{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+nav>button{
+    color: #ffff;
+    height: 30px;
+    background-color: rgb(50, 190, 206);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav>button>span{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.container>main{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+main>section.mainContent{
+    flex: 1;
+    width: 100px;
+    height: 100%;
+    background-color: #ffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* Tarjeta de usuario */
+
+.card-container{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container>.avatar{
+    height: 150px;
+    width: 150px;
+    background-image: url("./assets/avatar.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #ffff;
+    top: 70px;
+    left: 40px;
+}
+
+#top{
+    height: 130px;
+    background-color:rgb(46, 192, 221) ;
+    margin-bottom: 70px;
+}
+
+.card-body{
+
+    padding: 40px;
+    vertical-align: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: justify;
+}
+
+
+.card-body>h1{
+    margin-bottom: 16px;
+}
+
+.card-body>h4{
+    font-weight: 500;
+}
+
+.card-body>p{
+    font-weight: 400;
+}
+
+.card-body>h4, .card-body>p{
+    margin-bottom: 12px;
+}
+
+.card-body>div.editButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.card-body>div.editButton>img{
+    height: 16px;
+    width: 16px;
+}
+
+/* Education Info card */
+
+.educationInfo{
+    width: 100%;
+    height: fit-content;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 24px;
+
+}
+.educationInfo>h1{
+    margin-bottom: 24px;
+}
+
+
+
+
+/* Side Bar */
+
+.sideBar{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px; 
+}
+
+.solicitudesDeConexion{
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.solicitudesDeConexion>ul{
+    padding: 8px;
+}
+
+.solicitudesDeConexion>ul>li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.tusConexiones{
+    flex: 1;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 24px;
+
+}
+
+.infoUserConectionPetition{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.userPicturePetitionConection{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: 2px solid rgb(50, 190, 206);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.userPicturePetitionConection>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conectionPetitionButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.conectionPetitionButtons>button{
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(250, 110, 246);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.conectionPetitionIcon{
+    height: 30%;
+    width: 30%;
+}
+
+/* Tus conexiones */
+
+.tusConexiones>ul>li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+
+.tusConexiones{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.userConectionPicture{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.userConectionPicture>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
